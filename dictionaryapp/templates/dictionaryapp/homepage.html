@@ -1,0 +1,18 @@
+{% block content %}
+    <!DOCTYPE html>
+    <body>
+
+    <h2>Not Oxford Dictionary</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        Enter Word: <input type="text" name="word">
+        <br><br>
+        <input type="submit" value="Search">
+    </form>
+    <br><br>
+
+       <h2>{{ result }}</h2>
+    </body>
+
+{% endblock %}
